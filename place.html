@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모두예술극장</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/common/shortcut_logo.png">
+    
+    <link rel="stylesheet" href="css/common/reset.css">
+    <link rel="stylesheet" href="css/common/common.css">
+    <link rel="stylesheet" href="css/place.css">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <div id="wrap">
+        <div class="menu_area">
+            <header>
+                <div class="nav_area bgfont">
+                    <h1 class="logo"><a href="index.html"></a></h1>
+                    <ul class="nav">
+                        <li><a href="javascript:;">모두예술극장</a>
+                            <ul class="bgfont">
+                                <li><a href="info.html">극장소개</a></li>
+                                <li><a href="organ.html">조직도</a></li>
+                                <li><a href="biinfo.html">BI소개</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">공연안내</a>
+                            <ul class="bgfont">
+                                <li><a href="ready.html">공연일정</a></li>
+                                <li><a href="reserve.html">예매/취소안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">대관안내</a>
+                            <ul class="bgfont">
+                                <li><a href="place.html">공간안내</a></li>
+                                <li><a href="rental.html">대관안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">이용안내</a>
+                            <ul class="bgfont">
+                                <li><a href="useinfo.html">장애인 이용안내</a></li>
+                                <li><a href="ready.html">공지사항</a></li>
+                                <li><a href="ready.html">자주하는 질문</a></li>
+                                <li><a href="location.html">오시는 길</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="loginbtn_area">
+                        <a href="" class="btn login_menu">로그인</a>
+                        <a href="" class="btn">마이페이지</a>
+                    </div>
+                    <div class="navS_bg bgfont">
+                        <a href="javascript:;" class="btn_close menu_close btn">
+                            <div class="menu_icon">
+                                <span class="close"></span>
+                                <span class="close"></span>
+                            </div>
+                            메뉴닫기
+                        </a>
+                    </div>
+                </div>
+                <div class="login_bg bgfont">
+                    <div class="login_area">
+                        <h2>Login</h2>
+                        <ul class="login_tap">
+                            <li class="on"><a href="javascript:;">ID 로그인</a></li>
+                            <li><a href="javascript:;">간편 로그인</a></li>
+                        </ul>
+                        <div class="id_login Ltap on">
+                            <div class="label">
+                                <p>아이디</p>
+                                <a href="javascript:;">아이디 찾기</a>
+                            </div>
+                            <input type="text" placeholder="아이디를 입력해 주세요" id="id">
+                            <div class="label">
+                                <p>비밀번호</p>
+                                <a href="javascript:;">비밀번호 찾기</a>
+                            </div>
+                            <div class="pwd_area">
+                                <input type="text" placeholder="비밀번호를 입력해 주세요" id="password">
+                                <button type="button" class="pwd_icon"></button>
+                            </div>
+                            <label class="check">
+                                <input type="checkbox">
+                                <span class="checkbox_icon">아이디 저장</span>
+                            </label>
+                            <button type="button" id="btn_login">로그인</button>
+                        </div>
+                        <div class="social_login Ltap">
+                            <p>회원가입 후 마이페이지에서 SNS계정을 연동하시면<br>
+                            간편 로그인이 가능합니다.</p>
+                            <a href="javascript:;" class="join">회원가입 하기</a>
+                            <button type="button" class="naver">네이버 계정 로그인</button>
+                            <span>또는</span>
+                            <button type="button" class="kakao">카카오 계정 로그인</button>
+                        </div>
+                    </div>
+                    <div class="join_area">
+                        <a href="javascript:;" class="btn_close login_close btn">
+                            <div class="menu_icon">
+                                <span class="close"></span>
+                                <span class="close"></span>
+                            </div>
+                            로그인 닫기
+                        </a>
+                        <div>
+                            <span>회원이 아니신가요?</span>
+                            <a href="javascript:;" class="join">회원가입 하기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_bg"></div>
+                <div class="lgoin_bg"></div>
+            </header>
+            <div class="gnb_area">
+                <ul class="gnb">
+                    <li><button type="button" class="bgfont" id="useinfo_location">장애인 이용안내</button></li>
+                    <li><button type="button" id="color" class="bgfont">고대비</button></li>
+                    <li><button type="button" id="font" class="bgfont">글자 확대</button></li>
+                </ul>
+                <fieldset>
+                    <legend class="blind">통합검색</legend>
+                    <div class="search_area">
+                        <input type="text" id="search" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn_search">검색</button>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="btn_top">
+                <a href="#">TOP</a>
+            </div>
+        </div>
+
+        <main>
+            <div class="wrap">
+                <section class="reserve_area">
+                    <div class="head_area">
+                        <h2 class="head">공간안내</h2>
+                        <ul class="reserve_nav">
+                            <li class="on"><a href="#">모두예술극장</a></li>
+                            <li><a href="#">모두스튜디오</a></li>
+                            <li><a href="#">연습실</a></li>
+                        </ul>
+                    </div>
+
+                    <ul class="reserve_list">
+                        <li class="on Rlist_01">
+                            <div class="cont">
+                                <h3 class="title L_title">모두예술극장</h3>
+                                <p class="text">모두예술극장은 가변형 블랙박스 공연장입니다.
+                                    무대와 객석 크기 &middot; 위치 &middot; 구조 등을 자유롭게 조절함으로써 공연에 따라 다양한 무대와 객석의 형태를 구현할 수 있습니다.
+                                    공간이 함축하고 있는 무한한 가능성으로 연극뿐 아니라 무용, 음악, 다원 예술 등 다양한 장르의 공연을 선보일 수 있습니다.
+                                    전체 공간이 무단차로 조성되어 이동에 불편함이 있는 공연자와 기술 스태프들의 활동에 제약이 없습니다.</p>
+
+                                <div class="cont_area">
+                                    <ul>
+                                        <li>
+                                            <h4>형태</h4>
+                                            <p class="text">가변형 블랙박스 극장</p>
+                                            <p class="text">면적 508㎡</p>
+                                        </li>
+                                        <li>
+                                            <h4>객석</h4>
+                                            <div class="text_area">
+                                                <strong>1층</strong>
+                                                <p class="text">209석</p>
+                                            </div>
+                                            <div class="text_area">
+                                                <strong>2층</strong>
+                                                <p class="text">(논의필요)</p>
+                                            </div>
+                                            <p class="text">※ 휠체어 좌석 수는 가변적으로 운용</p>
+                                        </li>
+                                        <li>
+                                            <h4>시설</h4>
+                                            <p class="text">조명, 음향, 라이브 송출 시스템</p>
+                                            <p class="text">음성 해설 및 문자 통역 부스</p>
+                                            <p class="text">수납식 객석</p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="view_vr"><button type="button">VR 보기</button></div>
+                                </div>
+                            </div>
+
+                            <div class="cont">
+                                <ul class="slide1 slide">
+                                    <li>
+                                        <a href="img/place/slide_01.png">
+                                            <img src="img/place/slide_01.png" alt="모두예술극장 사진1 : 무대에서 바라본 객석 사진으로 좌석들이 계단식으로 배열되어 있습니다.">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="img/place/slide_02.png">
+                                            <img src="img/place/slide_02.png" alt="모두예술극장 사진2 : 2층 객석 사진으로 2층 복도가 보입니다.">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="img/place/slide_03.png">
+                                            <img src="img/place/slide_03.png" alt="모두예술극장 사진3 : 1층 객석 측면에서 바라본 공연장으로 객석과 1층 출입구가 있습니다.">
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="slide_B1 slide_B">
+                                    <img src="img/place/slide_01.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="cont">
+                                <h3 class="title L_title">좌석배치도 예시</h3>
+                                <p class="text">좌석 배치는 아래 배치도를 기준으로 공연 상황에 따라 다양한 형태로 변경해 사용할 수 있습니다.</p>
+
+                                <ul class="seat_list">
+                                    <li>
+                                        <strong>TYPE A</strong>
+                                        <p class="text"><span>총218석</span>(수납식객석 209석 + 휠체어석 9석)</p>
+                                        <figure><img src="img/place/seat_01.png" alt="TYPE A 배치예시로 객석 가장 앞쪽과 무대 사이에 휠체어석이 1열로 배치 되어 있고 일반 객석은 모두 11열로 구성되어 있습니다."></figure>
+                                    </li>
+                                    <li>
+                                        <strong>TYPE B</strong>
+                                        <p class="text"><span>총188석</span>(수납식객석 171석 + 휠체어석 17석)</p>
+                                        <figure><img src="img/place/seat_02.png" alt="TYPE B 배치예시로 객석 가장 앞쪽과 무대 사이에 휠체어석이 2열로 배치 되어 있고 일반 객석은 모두 10열로 구성되어 있습니다."></figure>
+                                    </li>
+                                    <li>
+                                        <strong>TYPE C</strong>
+                                        <p class="text"><span>총139석</span>(수납식객석 114석 + 휠체어석 25석)</p>
+                                        <figure><img src="img/place/seat_03.png" alt="TYPE C 배치예시로 객석 가장 앞쪽과 무대 사이에 휠체어석이 3열로 배치 되어 있고 일반 객석은 모두 6열로 구성되어 있습니다."></figure>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="cont">
+                                <h3 class="title L_title">부대시설</h3>
+                                <p class="text">모두예술극장은 분장실과 미팅룸, 연습실, 라운지 등 다양한 부대시설을 갖추고 있습니다.
+                                    분장실 내에는 장애인용 화장실, 샤워 시설, 탈의실 등 장애인 편의 시설이 마련돼 있으며,
+                                    1층 분장실에서 2층 무대로 연결되는 별도의 엘리베이터가 있어 배우들의 이동에 제약이 없습니다.</p>
+
+                                <ul class="room_list">
+                                    <li>
+                                        <img src="img/place/room_01.jpg" alt="">
+                                        <p class="text">라운지</p>
+                                    </li>
+                                    <li>
+                                        <img src="img/place/room_02.png" alt="">
+                                        <p class="text">분장실</p>
+                                    </li>
+                                    <li>
+                                        <img src="img/place/room_03.jpg" alt="">
+                                        <p class="text">대연습실</p>
+                                    </li>
+                                    <li>
+                                        <img src="img/place/room_04.jpg" alt="">
+                                        <p class="text">연습실1,2</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="Rlist_02">
+                            <div class="cont">
+                                <h3 class="title L_title">모두스튜디오</h3>
+                                <p class="text">모두 스튜디오는 다목적 창작 스튜디오로 장애 예술 콘텐츠를 보다 널리 알리고 소통하며, 창조적 아이디어를 보여줄 수 있는 창작의 공간, 담론의 장소입니다.소규모 공연, 세미나, 워크숍, 행사 등의 용도로 사용할 수 있습니다.</p>
+
+                                <div class="cont_area">
+                                    <ul>
+                                        <li>
+                                            <h4>규모</h4>
+                                            <p class="text">면적 209㎡</p>
+                                        </li>
+                                        <li>
+                                            <h4>시설</h4>
+                                            <p class="text">음향, 조명, 빔브로젝터 시스템,</p>
+                                            <p class="text">라이브 송출 시스템</p>
+                                        </li>
+                                        <li>
+                                            <h4>장비</h4>
+                                            <p class="text">빔프로젝터, 스크린, 오디오 믹서,</p>
+                                            <p class="text">스피커, 유, 무선마이크, 책상, 의자</p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="view_vr"></div>
+                                </div>
+                            </div>
+
+                            <div class="cont">
+                                <ul class="slide2 slide">
+                                    <li>
+                                        <a href="img/place/slide_04.png">
+                                            <img src="img/place/slide_04.png" alt="모두스튜디오 사진1">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="img/place/slide_05.png">
+                                            <img src="img/place/slide_05.png" alt="모두스튜디오 사진2">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="img/place/slide_06.png">
+                                            <img src="img/place/slide_06.png" alt="모두스튜디오 사진3">
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="slide_B2 slide_B">
+                                    <img src="img/place/slide_04.png" alt="">
+                                </div>
+                        </li>
+
+                        <li class="Rlist_03">
+                            <div class="cont">
+                                <h3 class="title L_title">연습실</h3>
+                                <p class="text">공연을 앞둔 창작 단체들이 모임을 갖거나 공연 리허설을 하는 공간입니다.<br>
+                                    모두 3개 or 2개의 연습실이 있으며, 규모에 따라 선택할 수 있습니다.
+                                </p>
+
+                                <div class="cont_area">
+                                    <ul>
+                                        <li>
+                                            <h4>규모</h4>
+                                            <p class="text">연습실 1 면적 72 ㎡</p>
+                                            <p class="text">연습실 2 면적 78 ㎡</p>
+                                            <p class="text">대연습실 면적 96 ㎡</p>
+                                        </li>
+                                        <li>
+                                            <h4>시설</h4>
+                                            <p class="text">충격 흡수형 마루, 전면거울</p>
+                                        </li>
+                                        <li>
+                                            <h4>장비</h4>
+                                            <p class="text">오디오 믹서, 스피커, 책상, 의자</p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="view_vr"><button type="button">VR 보기</button></div>
+                                </div>
+                            </div>
+
+                            <div class="cont">
+                                <h3 class="title L_title">대연습실</h3>
+
+                                <ul>
+                                    <li><img src="img/place/room_05.png" alt="대연습실 정면사진"></li>
+                                    <li><img src="img/place/room_06.png" alt="대연습실 측면사진"></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="foot_area">
+                <div class="f_left">
+                    <div class="policy">
+                        <a href="javascript:;" class="btn">이용약관</a>
+                        <a href="javascript:;" class="btn">개인정보처리방침</a>
+                        <a href="javascript:;" class="btn">영상정보처리기기 운영관리 방침</a>
+                    </div>
+                    <div class="adress">
+                        <span>우) 037 03737 서울특별시 서대문구 충정로7 구세군빌딩 1~3층 모두예술극장</span>
+                        <span>사업자등록번호 560-82-00018</span>
+                    </div>
+                    <p class="copy">COPYRIGHT&copy; 2023 MODU. ALL RIGHTS RESERVED.</p>
+                    <div class="site">
+                        <span>관련사이트 바로가기</span>
+                        <a href="javascript:;"><img src="img/common/footer_link_01.png" alt=""></a>
+                        <a href="javascript:;"><img src="img/common/footer_link_02.png" alt=""></a>
+                        <a href="javascript:;"><img src="img/common/footer_link_03.png" alt=""></a>
+                    </div>
+                    <a href="javascript:;" class="web_logo"><img src="img/common/footer_webC.png" alt=""></a>
+                </div>
+                <div class="f_right">
+                    <p>도와드릴까요?</p>
+                    <p>02-760-9780</p>
+                    <span>운영시간 안내</span>
+                    <span>평일 09시 - 18시 (토/일 공휴일 휴무)</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/place.js"></script>
+
+</body>
+</html>

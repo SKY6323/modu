@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모두예술극장</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/common/shortcut_logo.png">
+    
+    <link rel="stylesheet" href="css/common/reset.css">
+    <link rel="stylesheet" href="css/common/common.css">
+    <link rel="stylesheet" href="css/info.css">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="menu_area">
+            <header>
+                <div class="nav_area bgfont">
+                    <h1 class="logo"><a href="index.html"></a></h1>
+                    <ul class="nav">
+                        <li><a href="javascript:;">모두예술극장</a>
+                            <ul class="bgfont">
+                                <li><a href="info.html">극장소개</a></li>
+                                <li><a href="organ.html">조직도</a></li>
+                                <li><a href="biinfo.html">BI소개</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">공연안내</a>
+                            <ul class="bgfont">
+                                <li><a href="ready.html">공연일정</a></li>
+                                <li><a href="reserve.html">예매/취소안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">대관안내</a>
+                            <ul class="bgfont">
+                                <li><a href="place.html">공간안내</a></li>
+                                <li><a href="rental.html">대관안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">이용안내</a>
+                            <ul class="bgfont">
+                                <li><a href="useinfo.html">장애인 이용안내</a></li>
+                                <li><a href="ready.html">공지사항</a></li>
+                                <li><a href="ready.html">자주하는 질문</a></li>
+                                <li><a href="location.html">오시는 길</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="loginbtn_area">
+                        <a href="" class="btn login_menu">로그인</a>
+                        <a href="" class="btn">마이페이지</a>
+                    </div>
+                    <div class="navS_bg bgfont">
+                        <a href="javascript:;" class="btn_close menu_close btn">
+                            <div class="menu_icon">
+                                <span class="close"></span>
+                                <span class="close"></span>
+                            </div>
+                            메뉴닫기
+                        </a>
+                    </div>
+                </div>
+                <div class="login_bg bgfont">
+                    <div class="login_area">
+                        <h2>Login</h2>
+                        <ul class="login_tap">
+                            <li class="on"><a href="javascript:;">ID 로그인</a></li>
+                            <li><a href="javascript:;">간편 로그인</a></li>
+                        </ul>
+                        <div class="id_login Ltap on">
+                            <div class="label">
+                                <p>아이디</p>
+                                <a href="javascript:;">아이디 찾기</a>
+                            </div>
+                            <input type="text" placeholder="아이디를 입력해 주세요" id="id">
+                            <div class="label">
+                                <p>비밀번호</p>
+                                <a href="javascript:;">비밀번호 찾기</a>
+                            </div>
+                            <div class="pwd_area">
+                                <input type="text" placeholder="비밀번호를 입력해 주세요" id="password">
+                                <button type="button" class="pwd_icon"></button>
+                            </div>
+                            <label class="check">
+                                <input type="checkbox">
+                                <span class="checkbox_icon">아이디 저장</span>
+                            </label>
+                            <button type="button" id="btn_login">로그인</button>
+                        </div>
+                        <div class="social_login Ltap">
+                            <p>회원가입 후 마이페이지에서 SNS계정을 연동하시면<br>
+                            간편 로그인이 가능합니다.</p>
+                            <a href="javascript:;" class="join">회원가입 하기</a>
+                            <button type="button" class="naver">네이버 계정 로그인</button>
+                            <span>또는</span>
+                            <button type="button" class="kakao">카카오 계정 로그인</button>
+                        </div>
+                    </div>
+                    <div class="join_area">
+                        <a href="javascript:;" class="btn_close login_close btn">
+                            <div class="menu_icon">
+                                <span class="close"></span>
+                                <span class="close"></span>
+                            </div>
+                            로그인 닫기
+                        </a>
+                        <div>
+                            <span>회원이 아니신가요?</span>
+                            <a href="javascript:;" class="join">회원가입 하기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_bg"></div>
+                <div class="lgoin_bg"></div>
+            </header>
+            <div class="gnb_area">
+                <ul class="gnb">
+                    <li><button type="button" class="bgfont" id="useinfo_location">장애인 이용안내</button></li>
+                    <li><button type="button" id="color" class="bgfont">고대비</button></li>
+                    <li><button type="button" id="font" class="bgfont">글자 확대</button></li>
+                </ul>
+                <fieldset>
+                    <legend class="blind">통합검색</legend>
+                    <div class="search_area">
+                        <input type="text" id="search" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn_search">검색</button>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="btn_top">
+                <a href="#">TOP</a>
+            </div>
+        </div>
+
+        <main>
+            <div class="wrap">
+                <section class="info_area">
+                    <h2 class="head">극장소개</h2>
+
+                    <div class="img_area">
+                        <img src="img/info/modu_01.png" alt="">
+                        <img src="img/info/modu_02.png" alt="">
+                    </div>
+
+                    <div class="list">
+                        <div class="title_area">
+                            <h3>모두예술극장</h3>
+                            <span class="sub_title">MODU ART THEATER</span>
+                        </div>
+
+                        <ul class="list_area">
+                            <li class="list_01">
+                                <figure></figure>
+                                <p class="title">모두를 열다</p>
+                                <p class="text">
+                                    모두예술극장은 장애 예술가들의 창작 &middot; 육성 &middot; 교류 활동을 위해 조성된 국내 첫 ‘장애 예술 공연장’입니다.
+                                </p>
+                                <p class="text">
+                                    장애 예술가와 기술 스태프들이 물리적 제약 없이 활동할 수 있는 환경을 구축하고, 창작의 과정 &middot; 공연 &middot; 운영 서비스 전반에 걸쳐 편의성과 접근성을 실현하였습니다.
+                                </p>
+                            </li>
+                            <li class="list_02">
+                                <figure></figure>
+                                <p class="title">모두를 담다</p>
+                                <p class="text">
+                                    모두예술극장은 장애 예술가들이 전문성을 증진하고 우수한 작품을 창작할 수 있는 환경을 조성하였습니다. 연습실과 공연장을 상시 대관하여 안정적인 발표 공간을 제공하고, 다양한 베리어프리 공연과 프로그램을 선사합니다. 매개 인력 육성을 위해 접근성 서비스 전문가 과정을 운영하고, 특화된 장애 예술 공연을 개발하여 선보입니다.
+                                </p>
+                            </li>
+                            <li class="list_03">
+                                <figure></figure>
+                                <p class="title">모두를 잇다</p>
+                                <p class="text">
+                                    모두예술극장은 장애예술가들이 다양한 예술 분야와 층위에서 활동할 수 있도록 교류와 협력의 장을 마련하고 시민 참여를 끌어내어 문화예술의 다양성과 포용성 증진에 기여합니다. 문화예술 공연장으로서 장애인의 예술 접근성 향상에 공공적 역할을 다하겠습니다.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="floor">
+                    <div class="text_area">
+                        <div class="title_area">
+                            <h3>층별 안내</h3>
+                            <span class="sub_title">FLOOR INFORMATION</span>
+                        </div>
+                        <p class="text">
+                            모두예술극장은 바닥의 높낮이 차를 없애고 전면 평면으로 조성하여 이동 약자의 활동이 자유롭습니다.<br>
+                            모든 층은 엘리베이터로 이동 가능하며, 장애인에게 필요한 편의 시설을 갖추었습니다.
+                        </p>
+                    </div>
+
+                    <div class="floor_area">
+                        <div class="btn_floor">
+                            <ul>
+                                <li class="on"><a href="#" class="bgfont">3F</a></li>
+                                <li><a href="#" class="bgfont">2F</a></li>
+                                <li><a href="#" class="bgfont">1F</a></li>
+                            </ul>
+                        </div>
+                        
+                        <ul class="floor_list">
+                            <li class="on">
+                                <figure><img src="img/info/floor_03.png" alt=""></figure>
+                                <ul class="bgfont">
+                                    <li>모두예술극장 (객석2층)</li>
+                                    <li>미팅룸</li>
+                                    <li>모두 스튜디오</li>
+                                    <li>장애인 화장실</li>
+                                    <li>남자 화장실</li>
+                                    <li>여자 화장실</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <figure><img src="img/info/floor_02.png" alt=""></figure>
+                                <ul  class="bgfont">
+                                    <li>모두예술극장 (객석 1층)</li>
+                                    <li>매표소, 물품보관소</li>
+                                    <li>모두 라운지</li>
+                                    <li>연습실 1 &middot; 2</li>
+                                    <li>장애인 화장실</li>
+                                    <li>남자 화장실</li>
+                                    <li>여자 화장실</li>
+                                    <li>수유실</li>
+                                    <li>가족화장실</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <figure><img src="img/info/floor_01.png" alt=""></figure>
+                                <ul  class="bgfont">
+                                    <li>대연습실</li>
+                                    <li>스태프룸 1 &middot; 2</li>
+                                    <li>개인 분장실 1 &middot; 2,<br>
+                                        단체 분장실 1 &middot; 2
+                                    </li>
+                                    <li>장애인 샤워실 1 &middot; 2</li>
+                                    <li>장애인 화장실 겸 샤워실</li>
+                                    <li>로커</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="business">
+                    <div class="title_area">
+                        <h3>사업</h3>
+                        <span class="sub_title">BUSINESS</span>
+                    </div>
+                    
+                    <div class="business_area">
+                        <div class="business_1">
+                            <div class="title_box">
+                                <p>공연사업</p>
+                            </div>
+
+                            <p class="text">
+                                모두예술극장의 공연 사업은 ‘접근성’과 ‘다양성’ 두 축을 중심으로 기획됩니다. 수어 통역, 자막, 음성 해설, 촉각 투어 등을 도입하여 장애 유형별 특화 공연을 제작합니다. 특히 국내에서는 미개발된 발달장애인을 위한 릴랙스 퍼포먼스 공연 등 더 많은 장애인이 문화를 향유할 수 있도록 작품을 개발하여 선보입니다.<br>
+                                더불어 장애 예술이 지속적으로 성장할 수 있는 인프라를 구축하기 위하여 다양한 베리어프리 프로그램을 제공하고 있습니다.
+                            </p>
+
+                            <ul class="num_list">
+                                <li>
+                                    <span>①</span>
+                                    작품 공모, 작품 개발 및 제작
+                                    <ul class="sub_text">
+                                        <li>장애 유형별 특화 공연 제작</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>②</span>
+                                    국내외 우수 작품 초청
+                                </li>
+                                <li>
+                                    <span>③</span>
+                                    장애&middot;비장애 관객 개발
+                                </li>
+                                <li>
+                                    <span>④</span>
+                                    국내외 우수 작품 초청
+                                    <ul class="sub_text">
+                                        <li>백스테이지 투어</li>
+                                        <li>접근성 매니저 연수</li>
+                                        <li>매뉴얼 보급 및 교육</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="business_2">
+                            <div class="title_box">
+                                <p>대관사업</p>
+                            </div>
+
+                            <p class="text">
+                                모두예술극장은 장애 공연 예술가들의 가장 큰 바람이었던 연습 공간을 다수 확보하여 연중 대관합니다. 또한 공연장 대관을 통해 장애 예술가들이 창작 활동을 꽃피울 수 있도록 안정적인 발표 공간과 운영 서비스를 제공합니다. 이 밖에도 예술 활동에 필요한 다양한 소규모 발표, 세미나, 교육, 교류 활동을 할 수 있는 스튜디오, 라운지, 미팅룸 등을 갖추고 있습니다.
+                            </p>
+
+                            <p class="title">대관 가능 공간</p>
+                            <ul class="num_list">
+                                <li>
+                                    <span>①</span>
+                                    모두예술극장
+                                </li>
+                                <li>
+                                    <span>②</span>
+                                    연습실1, 연습실2
+                                </li>
+                                <li>
+                                    <span>③</span>
+                                    모두스튜디오
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="history">
+                    <div class="title_area">
+                        <h3>연혁</h3>
+                        <span class="sub_title">HISTORY</span>
+                    </div>
+                    
+                    <div class="histroy_area">
+                        <div class="text_area">
+                            <p class="text">
+                                한국장애인문화예술원은 ‘장애 예술인 문화예술 활동 지원에 관한 법률 약칭 장애 예술인 지원법' 에 의거한 전담 기관으로서, 장애 예술인을 위한 지원 사업과 정책 개발 기능을 수행하고 있습니다.
+                            </p>
+                            <p class="text">
+                                2020년 12월 제정된 ‘장애 예술인 문화예술 활동 지원에 관한 법률’은 장애인을 문화예술 창작의 주체로 인정하고, 창작자로서 장애 예술인의 문화예술 활동을 지원할 수 있는 근거와 체계를 마련했다는 점에서 큰 의미를 갖습니다.
+                            </p>
+                            <p class="text">
+                                한국장애인문화예술원은 이를 바탕으로 2019년 타당성 조사 및 연구를 통해 장애 예술 공연장 건립의 기본 계획을 세우고, 리모델링 공사를 거쳐 다양한 예술적 실험이 가능한 블랙박스 극장 형태의 ‘모두예술극장’을 개관하였습니다.
+                            </p>
+                        </div>
+                        <ul class="time_stamp">
+                            <li>
+                                <p class="t ime">2023.09.</p>
+                                <p class="text">모두예술극장 개관</p>
+                            </li>
+                            <li>
+                                <p class="time">2022.09.</p>
+                                <p class="text">제11차 장애 예술인 문화예술 활동 지원 기본 계획(2022~2026) 수립</p>
+                            </li>
+                            <li>
+                                <p class="time">2021.03.</p>
+                                <p class="text">장애 예술인 문화예술 활동 지원 업무 전담 기관(한국장애인문화예술원) 지정</p>
+                            </li>
+                            <li>
+                                <p class="time">2020.</p>
+                                <p class="text">장애 예술 공연장 추진을 위한 예산 수립</p>
+                            </li>
+                            <li>
+                                <p class="time">2020.06.</p>
+                                <p class="text">장애 예술인 문화예술 활동 지원에 관한 법률 제정</p>
+                                <ul class="sub_text">
+                                    <li>‘창작자’로서 장애 예술인의 문화예술 활동을 지원할 수 있는 근거와 체계 마련</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="time">2015.1 1.</p>
+                                <p class="text">장애인 문화예술센터 ‘이음’ 개관</p>
+                            </li>
+                            <li>
+                                <p class="time">2015.03.</p>
+                                <p class="text">재단법인 한국장애인문화예술원 설립</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="foot_area">
+                <div class="f_left">
+                    <div class="policy">
+                        <a href="javascript:;" class="btn">이용약관</a>
+                        <a href="javascript:;" class="btn">개인정보처리방침</a>
+                        <a href="javascript:;" class="btn">영상정보처리기기 운영관리 방침</a>
+                    </div>
+                    <div class="adress">
+                        <span>우) 037 03737 서울특별시 서대문구 충정로7 구세군빌딩 1~3층 모두예술극장</span>
+                        <span>사업자등록번호 560-82-00018</span>
+                    </div>
+                    <p class="copy">COPYRIGHT&copy; 2023 MODU. ALL RIGHTS RESERVED.</p>
+                    <div class="site">
+                        <span>관련사이트 바로가기</span>
+                        <a href="javascript:;"><img src="img/common/footer_link_01.png" alt=""></a>
+                        <a href="javascript:;"><img src="img/common/footer_link_02.png" alt=""></a>
+                        <a href="javascript:;"><img src="img/common/footer_link_03.png" alt=""></a>
+                    </div>
+                    <a href="javascript:;" class="web_logo"><img src="img/common/footer_webC.png" alt=""></a>
+                </div>
+                <div class="f_right">
+                    <p>도와드릴까요?</p>
+                    <p>02-760-9780</p>
+                    <span>운영시간 안내</span>
+                    <span>평일 09시 - 18시 (토/일 공휴일 휴무)</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/info.js"></script>
+
+</body>
+</html>

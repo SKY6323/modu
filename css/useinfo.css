@@ -1,0 +1,75 @@
+@charset "UTF-8";
+.keyword{
+    margin: 40px 0 56px;
+    border-left: 1px solid #b9b9b9;
+    border-right: 1px solid #b9b9b9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.keyword li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    padding: 45px 12px; box-sizing: border-box;
+    position: relative;
+}
+.keyword li + li::before{
+    content: '';
+    width: 1px; height: 100%;
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    background: #b9b9b9;
+}
+.cont + .cont{margin-top: 112px;}
+.cont .title{
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 32px;
+}
+.cont ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 69px;
+}
+.service li{
+    width: calc(33.3% - 46px);
+    position: relative;
+    text-align: center;
+}
+.service li::before{
+    content: '';
+    display: block;
+    margin: 0 auto 32px;
+    width: 299px; height: 156px;
+    background: url(../img/useinfo/icon_tileset.png) no-repeat 0 0;
+    background-size: 1495px 156px;
+}
+.service li:nth-child(2)::before{background-position: -299px 0;}
+.service li:nth-child(3)::before{background-position: -598px 0;}
+.service li:nth-child(4)::before{background-position: -897px 0;}
+.service li:nth-child(5)::before{background-position: -1196px 0;}
+
+/* place */
+.place li {
+    width: calc(33.3% - 46px);
+}
+.place li span{
+    display: block;
+    position: relative;
+    width: 100%; height: 0;
+    padding: 64% 0 0;
+    margin: 0 auto 32px;
+    background: transparent;
+}
+.place li span img{
+    display: block;
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    max-width: 100%; max-height: 100%;
+}

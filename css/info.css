@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+/* 공통 */
+section{margin-bottom: 112px;}
+section:last-child{margin-bottom: 0;}
+section + section{
+    padding-top: 112px; box-sizing: border-box;
+    border-top: 3px solid #000;
+}
+section + section.color{border-color: #fff;}
+
+/* title_area */
+.title_area h3{
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+.title_area .sub_title{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+/* info_area */
+.img_area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 56px;
+}
+.img_area > img{width: calc(50% - 34px);}
+.info_area  .title_area{
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+/* info_area list_area */
+.info_area .list_area{
+    width: 1030px; margin: 0 auto;
+    display: flex;
+    gap: 68px;
+}
+.list_area li{flex:1;}
+.list_area figure{
+    width: 150px; height: 164px;
+    margin-bottom: 40px;
+    background: url(../img/info/list_tileset.png) no-repeat 0 0;
+    background-size: auto 100%;
+}
+.list_area li:nth-child(2) figure{background-position: -150px 0;}
+.list_area li:nth-child(3) figure{background-position: -300px 0;}
+
+/* floor */
+.floor{
+    display: flex;
+    gap: 68px;
+}
+.floor .text_area{width: 298px;}
+.floor .text_area .title_area{margin-bottom: 40px;}
+.floor .floor_area{flex: 1; position: relative;}
+.floor_area .btn_floor{
+    position: absolute;
+    right: 100%; top: 0;
+}
+.btn_floor ul{display: flex; flex-direction: column;}
+.btn_floor ul li {display: flex;}
+.btn_floor ul li.on a{
+    background: #000;
+    color: #fff;
+    font-weight: 800;
+}
+.btn_floor ul li.on a.bgfont.color{background: #fff; color: #000;}
+.btn_floor ul li.on a::before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border: 1px solid #b9b9b9;
+    z-index: -1;
+}
+.btn_floor ul li.on a::after{
+    border: 5px solid #000;
+    box-shadow: 0 0 0 1px inset #b9b9b9;
+    z-index: 1;
+}
+.btn_floor ul li.on a.bgfont.color::after{border-color: #fff;}
+.btn_floor a{
+    display: block;
+    flex: 1;
+    position: relative;
+    width: 50px;
+    font-size: 16px;
+    line-height: 41px;
+    color:#000;
+    text-align: center;
+}
+.btn_floor a::after{
+    content: '';
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    margin: 0 -1px -1px 0;
+    border: 1px solid #b9b9b9;
+}
+.floor_list figure{flex: 1; background: #000; z-index: 1;}
+.floor_list figure > img{width: 100%;}
+.floor_list > li{display: none;}
+.floor_list > li.on{display: flex;}
+.floor_list > li > ul{
+    width: 246px;
+    padding: 45px 31px; box-sizing: border-box;
+    border: 1px solid #000;
+    background: #fff;
+    font-size: 18px;
+    line-height: 1.33;
+}
+.floor_list > li > ul.bgfont.color{border-color: #fff;}
+.floor_list > li > ul >li{
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+}
+.floor_list > li > ul >li::before{
+    content: '';
+    position: absolute;
+    top: 6px; left: 0;
+    width: 0; height: 0;
+    border: 2px solid #000;
+    border-radius: 100%;
+}
+.floor_list > li > ul.bgfont.color >li::before{border-color: #fff;}
+
+/* business */
+.business{display: flex; gap: 68px;}
+.business .title_area{width: 298px;}
+.business .business_area{flex: 1;}
+.business_area > div{
+    position: relative;
+    padding: 20px 0 0 310px; box-sizing: border-box;
+}
+.business_area > div + div{margin-top: 56px;}
+.business_area > div .title_box{
+    position: absolute;
+    left: 0; top: 0;
+    display: block;
+    width: 240px; height: 188px;
+    margin: 0 0 40px;
+    padding: 41px 31px; box-sizing: border-box;
+    background: #000;
+    color:#fff;
+    font-size: 20px;
+    line-height: 60px;
+    text-align: right;
+}
+.business_area > div .title_box.color{background: #fff; color:#000;}
+.business_area > div .title_box p{
+    display: inline-block;
+    padding-left: 16px;
+    border-bottom: 3px solid #fff;
+    font-weight: 800;
+}
+.business_area > div .title_box.color p{border-color: #000;}
+.business_area > div .title_box::before{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0; top: 0;
+    width: 120px; height: 0;
+    border-top: 28px solid #fff;
+    border-left: 54px solid transparent;
+}
+.business_area > div .title_box.color::before{border-top: 28px solid #000;}
+.business_area > div .title_box::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 20px; bottom: 20px;
+    width: 41px; height: 29px;
+    background: url(../img/common/logo_tileset.png);
+    background-size: 150px 150px;
+}
+.business_area > div .text{margin-bottom: 40px;}
+.business_area > div .num_list{position: relative;}
+.business_area > div .num_list > li{
+    position: relative;
+    font-size: 18px;
+    line-height: 1.5;
+    padding-left: 32px;
+}
+.business_area > div .num_list >li + li{margin-top: 18px;}
+.business_area .business_1 .num_list > li:last-child{
+    position: absolute;
+    left: 50%; top: 0;
+    margin: 0;
+}
+.business_area > div .num_list li span{
+    float: left;
+    width: 32px;
+    margin-left: calc(32px * -1);
+    font-weight: 700;
+}
+.sub_text li{position: relative; padding-left: 12px;}
+.sub_text li::before{
+    content: '';
+    position: absolute;
+    top: 12px; left: 0;
+    width: 6px; height: 0;
+    border-top: 1px solid #000;
+}
+.business_area .business_2 .title{
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+/* history */
+.history .title_area{margin-bottom: 40px;}
+.histroy_area{
+    display: flex;
+    gap: 90px;
+}
+.histroy_area .text_area{width: 47%;}
+.histroy_area .text_area .text{margin-bottom: 20px;}
+.histroy_area .time_stamp{
+    margin: 0;
+    padding-left: 100px; box-sizing: border-box;
+    position: relative;
+    line-height: 1.33;
+}
+.histroy_area .time_stamp::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 8px;
+    border-radius: 4px;
+    background: linear-gradient(#0092ad, #b9b9b9, #ff4d00);
+}
+.time_stamp > li{padding-left: 120px; box-sizing: border-box;}
+.time_stamp > li + li{margin-top: 24px;}
+.time_stamp > li .time{
+    float: left;
+    margin-left: -120px;
+    width: 120px;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+.time_stamp > li .text{line-height: normal; font-size: 18px;}
+.time_stamp > li .sub_text li{margin-top: 16px; font-size: 18px;}

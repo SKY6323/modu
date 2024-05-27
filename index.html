@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모두예술극장</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/common/shortcut_logo.png">
+    
+    <link rel="stylesheet" href="css/common/reset.css">
+    <link rel="stylesheet" href="css/common/common.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <div id="wrap">
+        <div class="menu_area">
+            <header>
+                <div class="nav_area bgfont">
+                    <h1 class="logo"><a href="index.html"></a></h1>
+                    <ul class="nav">
+                        <li><a href="javascript:;">모두예술극장</a>
+                            <ul class="bgfont">
+                                <li><a href="info.html">극장소개</a></li>
+                                <li><a href="organ.html">조직도</a></li>
+                                <li><a href="biinfo.html">BI소개</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">공연안내</a>
+                            <ul class="bgfont">
+                                <li><a href="ready.html">공연일정</a></li>
+                                <li><a href="reserve.html">예매/취소안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">대관안내</a>
+                            <ul class="bgfont">
+                                <li><a href="place.html">공간안내</a></li>
+                                <li><a href="rental.html">대관안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">이용안내</a>
+                            <ul class="bgfont">
+                                <li><a href="useinfo.html">장애인 이용안내</a></li>
+                                <li><a href="ready.html">공지사항</a></li>
+                                <li><a href="ready.html">자주하는 질문</a></li>
+                                <li><a href="location.html">오시는 길</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="loginbtn_area">
+                        <a href="" class="btn login_menu">로그인</a>
+                        <a href="" class="btn">마이페이지</a>
+                    </div>
+                    <div class="navS_bg bgfont">
+                        <a href="javascript:;" class="btn_close menu_close btn">
+                            <div class="menu_icon">
+                                <span class="close"></span>
+                                <span class="close"></span>
+                            </div>
+                            메뉴닫기
+                        </a>
+                    </div>
+                </div>
+                <div class="login_bg bgfont">
+                    <div class="login_area">
+                        <h2>Login</h2>
+                        <ul class="login_tap">
+                            <li class="on"><a href="javascript:;">ID 로그인</a></li>
+                            <li><a href="javascript:;">간편 로그인</a></li>
+                        </ul>
+                        <div class="id_login Ltap on">
+                            <div class="label">
+                                <p>아이디</p>
+                                <a href="javascript:;">아이디 찾기</a>
+                            </div>
+                            <input type="text" placeholder="아이디를 입력해 주세요" id="id">
+                            <div class="label">
+                                <p>비밀번호</p>
+                                <a href="javascript:;">비밀번호 찾기</a>
+                            </div>
+                            <div class="pwd_area">
+                                <input type="text" placeholder="비밀번호를 입력해 주세요" id="password">
+                                <button type="button" class="pwd_icon"></button>
+                            </div>
+                            <label class="check">
+                                <input type="checkbox">
+                                <span class="checkbox_icon">아이디 저장</span>
+                            </label>
+                            <button type="button" id="btn_login">로그인</button>
+                        </div>
+                        <div class="social_login Ltap">
+                            <p>회원가입 후 마이페이지에서 SNS계정을 연동하시면<br>
+                            간편 로그인이 가능합니다.</p>
+                            <a href="javascript:;" class="join">회원가입 하기</a>
+                            <button type="button" class="naver">네이버 계정 로그인</button>
+                            <span>또는</span>
+                            <button type="button" class="kakao">카카오 계정 로그인</button>
+                        </div>
+                    </div>
+                    <div class="join_area">
+                        <a href="javascript:;" class="btn_close login_close btn">
+                            <div class="menu_icon">
+                                <span class="close"></span>
+                                <span class="close"></span>
+                            </div>
+                            로그인 닫기
+                        </a>
+                        <div>
+                            <span>회원이 아니신가요?</span>
+                            <a href="javascript:;" class="join">회원가입 하기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_bg"></div>
+                <div class="lgoin_bg"></div>
+            </header>
+            <div class="gnb_area">
+                <ul class="gnb">
+                    <li><button type="button" class="bgfont" id="useinfo_location">장애인 이용안내</button></li>
+                    <li><button type="button" id="color" class="bgfont">고대비</button></li>
+                    <li><button type="button" id="font" class="bgfont">글자 확대</button></li>
+                </ul>
+                <fieldset>
+                    <legend class="blind">통합검색</legend>
+                    <div class="search_area">
+                        <input type="text" id="search" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn_search">검색</button>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="btn_top">
+                <a href="#">TOP</a>
+            </div>
+        </div>
+
+        <main>
+            <div class="wrap">
+                <section class="whatOn">
+                    <h2>What's on</h2>
+
+                    <div class="swiper list_whatOn">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="javascript:;">
+                                    <figure><img src="img/index/what_01.jpg" alt="모두 뮤직 페스타(공연)"></figure>
+                                    <div class="text_area">
+                                        <p class="title">모두 뮤직 페스타 (공연)</p>
+                                        <p class="text">
+                                            <span>3.19,20,22,23(화,수,금,토)</span>
+                                            <span>평일 19:30 주말 17:00</span>
+                                        </p>
+
+                                        <div class="icon_area">
+                                            <span class="type">행사</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="javascript:;">
+                                    <figure><img src="img/index/what_02.jpg" alt="모두 뮤직 페스타(포럼,워크숍)"></figure>
+                                    <div class="text_area">
+                                        <p class="title">모두 뮤직 페스타 (포럼, 워크숍)</p>
+                                        <p class="text">
+                                            <span>포럼 - 3.21(목) 10:00 - 17:30, </span>
+                                            <span>워크숍 - 프로그램별 상이</span>
+                                        </p>
+
+                                        <div class="icon_area">
+                                            <span class="type">행사</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="swiperN_area">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-pagination"></div>
+                            <div class="autoplay-progress">
+                                <svg viewBox="0 0 48 48">
+                                  <circle cx="24" cy="24" r="20"></circle>
+                                </svg>
+                                <span></span>
+                              </div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+
+                    <a href="javascript:;" class="whatOn_data">공연일정 전체보기</a>
+                </section>
+
+                <section class="event_nav">
+                    <ul class="Enav">
+                        <li><a href="javascript:;">장애인 이용안내</a></li>
+                        <li><a href="javascript:;">공간안내</a></li>
+                        <li><a href="javascript:;">대관신청</a></li>
+                        <li><a href="javascript:;">무대기술/시설자료</a></li>
+                        <li><a href="javascript:;">오시는길</a></li>
+                    </ul>
+
+                    <a href="javascript:;" class="btn_vr">모두예술극장 <span>VR</span> 보기</a>
+                </section>
+
+                <section class="notice">
+                    <div>
+                        <div class="title_area">
+                            <h2>Notice</h2>
+                            <a href="javascript:;" class="btn_more btn">전체보기</a>
+                        </div>
+                        <ul class="list_notice">
+                            <li><a href="javascript:;">
+                                <p class="tag">대관공고</p>
+                                <p class="title">2024년 모두예술극장 상반기 수시대관공고</p>
+                                <p class="date">2024.03.07</p>
+                            </a></li>
+                            <li><a href="javascript:;">
+                                <p class="tag">채용공고</p>
+                                <p class="title">모두예술극장 2024년 2차 안내원 모집공고</p>
+                                <p class="date">2024.03.18</p>
+                            </a></li>
+                            <li><a href="javascript:;">
+                                <p class="tag">채용공고</p>
+                                <p class="title">모두예술극장 2024년 1차 안내원 모집 최종합격자 발표</p>
+                                <p class="date">2024.02.26</p>
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="banner">
+                        <figure><a href="javascript:;"><img src="img/index/notice_01.gif" alt=""></a></figure>
+                        <figure><a href="javascript:;"><img src="img/index/notice_02.gif" alt=""></a></figure>
+                    </div>
+                </section>
+
+                <section class="sns">
+                    <h2>SNS</h2>
+
+                    <div class="swiper list_sns">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide"><a href="javascript:;">
+                                <div class="title">instagram</div>
+                                <div class="sns_img"><img src="img/index/sns_01.gif" alt=""></div>
+                                <div class="sns_nav">MODU</div>
+                            </a></li>
+                            <li class="swiper-slide"><a href="javascript:;">
+                                <div class="title">youtube</div>
+                                <div class="sns_img"><img src="img/index/sns_02.gif" alt=""></div>
+                                <div class="sns_nav">MODU</div>
+                            </a></li>
+                            <li class="swiper-slide"><a href="javascript:;">
+                                <div class="title">naverblog</div>
+                                <div class="sns_img"><img src="img/index/sns_03.png" alt=""></div>
+                                <div class="sns_nav">MODU</div>
+                            </a></li>
+                            <li class="swiper-slide"><a href="javascript:;">
+                                <div class="title">facebook</div>
+                                <div class="sns_img"><img src="img/index/sns_04.jpg" alt=""></div>
+                                <div class="sns_nav">MODU</div>
+                            </a></li>
+                        </ul>
+
+                        <div class="swiperN_area">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+
+                    <div class="sns_link">
+                        <a href="javascript:;">인스타그램</a>
+                        <a href="javascript:;">유투브</a>
+                        <a href="javascript:;">블로그</a>
+                        <a href="javascript:;">페이스북</a>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="foot_area">
+                <div class="f_left">
+                    <div class="policy">
+                        <a href="javascript:;" class="btn">이용약관</a>
+                        <a href="javascript:;" class="btn">개인정보처리방침</a>
+                        <a href="javascript:;" class="btn">영상정보처리기기 운영관리 방침</a>
+                    </div>
+                    <div class="adress">
+                        <span>우) 037 03737 서울특별시 서대문구 충정로7 구세군빌딩 1~3층 모두예술극장</span>
+                        <span>사업자등록번호 560-82-00018</span>
+                    </div>
+                    <p class="copy">COPYRIGHT&copy; 2023 MODU. ALL RIGHTS RESERVED.</p>
+                    <div class="site">
+                        <span>관련사이트 바로가기</span>
+                        <a href="javascript:;"><img src="img/common/footer_link_01.png" alt=""></a>
+                        <a href="javascript:;"><img src="img/common/footer_link_02.png" alt=""></a>
+                        <a href="javascript:;"><img src="img/common/footer_link_03.png" alt=""></a>
+                    </div>
+                    <a href="javascript:;" class="web_logo"><img src="img/common/footer_webC.png" alt=""></a>
+                </div>
+                <div class="f_right">
+                    <p>도와드릴까요?</p>
+                    <p>02-760-9780</p>
+                    <span>운영시간 안내</span>
+                    <span>평일 09시 - 18시 (토/일 공휴일 휴무)</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        var swiper = new Swiper(".list_whatOn", {
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay:{
+                delay: 5000,
+                disableOnlnteraction:false
+            },
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                progressCircle.style.setProperty("--progress", 1 - progress);
+                }
+            }
+        });
+
+        var swiper = new Swiper(".list_sns", {
+          slidesPerView: 3,
+          navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+        });
+      </script>
+</body>
+</html>

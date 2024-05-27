@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모두예술극장</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/common/shortcut_logo.png">
+    
+    <link rel="stylesheet" href="css/common/reset.css">
+    <link rel="stylesheet" href="css/common/common.css">
+    <link rel="stylesheet" href="css/location.css">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+</head>
+<body>
+    <div id="wrap">
+        <div class="menu_area">
+            <header>
+                <div class="nav_area bgfont">
+                    <h1 class="logo"><a href="index.html"></a></h1>
+                    <ul class="nav">
+                        <li><a href="javascript:;">모두예술극장</a>
+                            <ul class="bgfont">
+                                <li><a href="info.html">극장소개</a></li>
+                                <li><a href="organ.html">조직도</a></li>
+                                <li><a href="biinfo.html">BI소개</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">공연안내</a>
+                            <ul class="bgfont">
+                                <li><a href="ready.html">공연일정</a></li>
+                                <li><a href="reserve.html">예매/취소안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">대관안내</a>
+                            <ul class="bgfont">
+                                <li><a href="place.html">공간안내</a></li>
+                                <li><a href="rental.html">대관안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">이용안내</a>
+                            <ul class="bgfont">
+                                <li><a href="useinfo.html">장애인 이용안내</a></li>
+                                <li><a href="ready.html">공지사항</a></li>
+                                <li><a href="ready.html">자주하는 질문</a></li>
+                                <li><a href="location.html">오시는 길</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="loginbtn_area">
+                        <a href="" class="btn login_menu">로그인</a>
+                        <a href="" class="btn">마이페이지</a>
+                    </div>
+                    <div class="navS_bg bgfont">
+                        <a href="javascript:;" class="btn_close menu_close btn">
+                            <div class="menu_icon">
+                                <span class="close"></span>
+                                <span class="close"></span>
+                            </div>
+                            메뉴닫기
+                        </a>
+                    </div>
+                </div>
+                <div class="login_bg bgfont">
+                    <div class="login_area">
+                        <h2>Login</h2>
+                        <ul class="login_tap">
+                            <li class="on"><a href="javascript:;">ID 로그인</a></li>
+                            <li><a href="javascript:;">간편 로그인</a></li>
+                        </ul>
+                        <div class="id_login Ltap on">
+                            <div class="label">
+                                <p>아이디</p>
+                                <a href="javascript:;">아이디 찾기</a>
+                            </div>
+                            <input type="text" placeholder="아이디를 입력해 주세요" id="id">
+                            <div class="label">
+                                <p>비밀번호</p>
+                                <a href="javascript:;">비밀번호 찾기</a>
+                            </div>
+                            <div class="pwd_area">
+                                <input type="text" placeholder="비밀번호를 입력해 주세요" id="password">
+                                <button type="button" class="pwd_icon"></button>
+                            </div>
+                            <label class="check">
+                                <input type="checkbox">
+                                <span class="checkbox_icon">아이디 저장</span>
+                            </label>
+                            <button type="button" id="btn_login">로그인</button>
+                        </div>
+                        <div class="social_login Ltap">
+                            <p>회원가입 후 마이페이지에서 SNS계정을 연동하시면<br>
+                            간편 로그인이 가능합니다.</p>
+                            <a href="javascript:;" class="join">회원가입 하기</a>
+                            <button type="button" class="naver">네이버 계정 로그인</button>
+                            <span>또는</span>
+                            <button type="button" class="kakao">카카오 계정 로그인</button>
+                        </div>
+                    </div>
+                    <div class="join_area">
+                        <a href="javascript:;" class="btn_close login_close btn">
+                            <div class="menu_icon">
+                                <span class="close"></span>
+                                <span class="close"></span>
+                            </div>
+                            로그인 닫기
+                        </a>
+                        <div>
+                            <span>회원이 아니신가요?</span>
+                            <a href="javascript:;" class="join">회원가입 하기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_bg"></div>
+                <div class="lgoin_bg"></div>
+            </header>
+            <div class="gnb_area">
+                <ul class="gnb">
+                    <li><button type="button" class="bgfont" id="useinfo_location">장애인 이용안내</button></li>
+                    <li><button type="button" id="color" class="bgfont">고대비</button></li>
+                    <li><button type="button" id="font" class="bgfont">글자 확대</button></li>
+                </ul>
+                <fieldset>
+                    <legend class="blind">통합검색</legend>
+                    <div class="search_area">
+                        <input type="text" id="search" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn_search">검색</button>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="btn_top">
+                <a href="#">TOP</a>
+            </div>
+        </div>
+
+        <main>
+            <div class="wrap">
+                <section class="location">
+                    <h2 class="head">오시는 길</h2>
+                    <h3 class="title">서울특별시 서대문구 충정로7 구세군빌딩 1~3층 모두예술극장</h3>
+
+                    <h4 class="title">접근성</h4>
+                    <p class="text">사전 예약을 하면 접근성 매니저가 도착 지점(지하철역, 버스·택시 정류장 등)으로 픽업 서비스를 나갑니다.</p>
+
+                    <div class="btn_area">
+                        <span><a href="https://youtu.be/W9IPyUbyBUY" target="_blank" class="btn">시각장애인 접근성 안내영상</a></span>
+                        <span><a href="https://youtu.be/6UqSpB3UT_A" target="_blank" class="btn">휠체어장애인 접근성 영상</a></span>
+                    </div>
+
+                    <div class="call_area">
+                        <strong>대표전화</strong>
+                        <span class="text">02-760-9780</span>
+                    </div>
+
+                    <div class="map">
+                        <div id="daumRoughmapContainer1716183422799" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                    </div>
+
+                    <div class="list_area">
+                        <dl>
+                            <dt>지하철</dt>
+                            <dd class="cont_01">
+                                <strong>
+                                    <span>2</span>
+                                    <span>5</span>
+                                    호선 충정로역 7번 출구
+                                </strong>
+                                <span>(공연장 지하 2층과 연결)</span>
+
+                                <p class="text">※ 휠체어 이용이 가능한 엘리베이터는 충정로역 8번 출구 맞은편에 있습니다. 엘리베이터(2호기)에서 내린 후 유턴하여 20m 직진하면 오른편에 유리 건물로 된 모두예술극장이 나옵니다.</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>버스</dt>
+                            <dd  class="cont_02">
+                                <ul>
+                                    <li>
+                                        <strong>간선</strong>
+                                        <p class="text">160, 171, 260, 270, 271, 273, 600, 602, 700, 721, 742, N26, N75</p>
+                                    </li>
+                                    <li>
+                                        <strong>지선</strong>
+                                        <p class="text">1002</p>
+                                    </li>
+                                    <li>
+                                        <strong>광역</strong>
+                                        <p class="text">1004, G6005, 8600</p>
+                                    </li>
+                                    <li>
+                                        <strong>마을</strong>
+                                        <p class="text">서대문02, 서대문06</p>
+                                    </li>
+                                    <li>
+                                        <strong>공항</strong>
+                                        <p class="text">6002</p>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>자동차</dt>
+                            <dd class="cont_03">
+                                <p class="text">장애인 전용 주차는 지하 2층에 가능합니다. 하차 후 엘리베이터에 탑승하여 2층으로 이동해 주세요.</p>
+                                <p class="text">
+                                    <strong>※ 주차장 이용시</strong>
+                                    서울 서대문구 충정로3가, 구세군빌딩 지하주차장<br>
+                                    일반요금: 5분 500원 (일 최대요금 20,000원)<br>
+                                    공연관객: 2시간까지 3,000원 (초과 5분마다 500원)
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+            </div>
+            
+        </main>
+
+        <footer>
+            <div class="foot_area">
+                <div class="f_left">
+                    <div class="policy">
+                        <a href="javascript:;" class="btn">이용약관</a>
+                        <a href="javascript:;" class="btn">개인정보처리방침</a>
+                        <a href="javascript:;" class="btn">영상정보처리기기 운영관리 방침</a>
+                    </div>
+                    <div class="adress">
+                        <span>우) 037 03737 서울특별시 서대문구 충정로7 구세군빌딩 1~3층 모두예술극장</span>
+                        <span>사업자등록번호 560-82-00018</span>
+                    </div>
+                    <p class="copy">COPYRIGHT&copy; 2023 MODU. ALL RIGHTS RESERVED.</p>
+                    <div class="site">
+                        <span>관련사이트 바로가기</span>
+                        <a href="javascript:;"><img src="img/common/footer_link_01.png" alt=""></a>
+                        <a href="javascript:;"><img src="img/common/footer_link_02.png" alt=""></a>
+                        <a href="javascript:;"><img src="img/common/footer_link_03.png" alt=""></a>
+                    </div>
+                    <a href="javascript:;" class="web_logo"><img src="img/common/footer_webC.png" alt=""></a>
+                </div>
+                <div class="f_right">
+                    <p>도와드릴까요?</p>
+                    <p>02-760-9780</p>
+                    <span>운영시간 안내</span>
+                    <span>평일 09시 - 18시 (토/일 공휴일 휴무)</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/common.js"></script>
+    <!-- 카카오 맵 -->
+    <script charset="UTF-8">
+        new daum.roughmap.Lander({
+            "timestamp" : "1716183422799",
+            "key" : "2jdp5",
+            "mapWidth" : "640",
+            "mapHeight" : "360"
+        }).render();
+    </script>
+</body>
+</html>

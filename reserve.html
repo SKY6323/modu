@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모두예술극장</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/common/shortcut_logo.png">
+    
+    <link rel="stylesheet" href="css/common/reset.css">
+    <link rel="stylesheet" href="css/common/common.css">
+    <link rel="stylesheet" href="css/reserve.css">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="menu_area">
+            <header>
+                <div class="nav_area bgfont">
+                    <h1 class="logo"><a href="index.html"></a></h1>
+                    <ul class="nav">
+                        <li><a href="javascript:;">모두예술극장</a>
+                            <ul class="bgfont">
+                                <li><a href="info.html">극장소개</a></li>
+                                <li><a href="organ.html">조직도</a></li>
+                                <li><a href="biinfo.html">BI소개</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">공연안내</a>
+                            <ul class="bgfont">
+                                <li><a href="ready.html">공연일정</a></li>
+                                <li><a href="reserve.html">예매/취소안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">대관안내</a>
+                            <ul class="bgfont">
+                                <li><a href="place.html">공간안내</a></li>
+                                <li><a href="rental.html">대관안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">이용안내</a>
+                            <ul class="bgfont">
+                                <li><a href="useinfo.html">장애인 이용안내</a></li>
+                                <li><a href="ready.html">공지사항</a></li>
+                                <li><a href="ready.html">자주하는 질문</a></li>
+                                <li><a href="location.html">오시는 길</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="loginbtn_area">
+                        <a href="" class="btn login_menu">로그인</a>
+                        <a href="" class="btn">마이페이지</a>
+                    </div>
+                    <div class="navS_bg bgfont">
+                        <a href="javascript:;" class="btn_close menu_close btn">
+                            <div class="menu_icon">
+                                <span class="close"></span>
+                                <span class="close"></span>
+                            </div>
+                            메뉴닫기
+                        </a>
+                    </div>
+                </div>
+                <div class="login_bg bgfont">
+                    <div class="login_area">
+                        <h2>Login</h2>
+                        <ul class="login_tap">
+                            <li class="on"><a href="javascript:;">ID 로그인</a></li>
+                            <li><a href="javascript:;">간편 로그인</a></li>
+                        </ul>
+                        <div class="id_login Ltap on">
+                            <div class="label">
+                                <p>아이디</p>
+                                <a href="javascript:;">아이디 찾기</a>
+                            </div>
+                            <input type="text" placeholder="아이디를 입력해 주세요" id="id">
+                            <div class="label">
+                                <p>비밀번호</p>
+                                <a href="javascript:;">비밀번호 찾기</a>
+                            </div>
+                            <div class="pwd_area">
+                                <input type="text" placeholder="비밀번호를 입력해 주세요" id="password">
+                                <button type="button" class="pwd_icon"></button>
+                            </div>
+                            <label class="check">
+                                <input type="checkbox">
+                                <span class="checkbox_icon">아이디 저장</span>
+                            </label>
+                            <button type="button" id="btn_login">로그인</button>
+                        </div>
+                        <div class="social_login Ltap">
+                            <p>회원가입 후 마이페이지에서 SNS계정을 연동하시면<br>
+                            간편 로그인이 가능합니다.</p>
+                            <a href="javascript:;" class="join">회원가입 하기</a>
+                            <button type="button" class="naver">네이버 계정 로그인</button>
+                            <span>또는</span>
+                            <button type="button" class="kakao">카카오 계정 로그인</button>
+                        </div>
+                    </div>
+                    <div class="join_area">
+                        <a href="javascript:;" class="btn_close login_close btn">
+                            <div class="menu_icon">
+                                <span class="close"></span>
+                                <span class="close"></span>
+                            </div>
+                            로그인 닫기
+                        </a>
+                        <div>
+                            <span>회원이 아니신가요?</span>
+                            <a href="javascript:;" class="join">회원가입 하기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_bg"></div>
+                <div class="lgoin_bg"></div>
+            </header>
+            <div class="gnb_area">
+                <ul class="gnb">
+                    <li><button type="button" class="bgfont" id="useinfo_location">장애인 이용안내</button></li>
+                    <li><button type="button" id="color" class="bgfont">고대비</button></li>
+                    <li><button type="button" id="font" class="bgfont">글자 확대</button></li>
+                </ul>
+                <fieldset>
+                    <legend class="blind">통합검색</legend>
+                    <div class="search_area">
+                        <input type="text" id="search" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn_search">검색</button>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="btn_top">
+                <a href="#">TOP</a>
+            </div>
+        </div>
+
+        <main>
+            <div class="wrap">
+                <section class="reserve_area">
+                    <div class="head_area">
+                        <h2 class="head">예매/취소안내</h2>
+                        <ul class="reserve_nav">
+                            <li class="on"><a href="#">티켓예매안내</a></li>
+                            <li><a href="#">취소/환불안내</a></li>
+                            <li><a href="#">할인안내</a></li>
+                        </ul>
+                    </div>
+
+                    <ul class="reserve_list">
+                        <li class="on Rlist_01">
+                            <div class="cont">
+                                <h3 class="title L_title">예매 방법</h3>
+
+                                <ul class="way">
+                                    <li>
+                                        <h4>인터넷 및 모바일 예매</h4>
+
+                                        <ul class="num">
+                                            <li><span>①</span>홈페이지 또는 모바일 접속</li>
+                                            <li><span>②</span>회원가입 및 로그인</li>
+                                            <li><span>③</span>공연,예매일,시간,좌석 선택</li>
+                                            <li><span>④</span>결제 선택 후 예매완료</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h4>전화예매</h4>
+                                        <div class="text_area">
+                                            <strong>모두예술극장 02-760-9771</strong>
+                                            <p class="text">운영시간 : 평일 월~금 10:30~18:00 (공휴일 및 주말 제외)</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h4>현장예매</h4>
+                                        <p class="text">잔여티켓에 한하여 공연 당일에만 가능</p>
+                                    </li>
+                                </ul>
+
+                                <div class="text_area">
+                                    <h3 class="title">예매페이지를 통한 예매에 불편이 있으신 분, 또는 접근성 관련 문의는 아래 문의처로 연락 주시면 예매 및 안내 도와드리겠습니다.</h3>
+
+                                    <ul class="dot">
+                                        <li>통신 중계 서비스 손말이음센터(https://107.relaycall.or.kr) ※ 통신 중계 서비스는 청각, 언어장애인이 전화를 통한 의사소통을 가능하게 도움을 주는 서비스입니다.</li>
+                                        <li>전동, 일반 휠체어 입장이 가능하며, 휠체어석 예매는 티켓박스(02-760-9771)를 통해서만 예매가 가능합니다. 휠체어석 동반인도 티켓을 구매하셔야 입장이 가능합니다.</li>
+                                        <li>휠체어(보행 보조 의료기 포함)이용자는 공연장 및 객석구조에 따른 안내와 상담을 위해 사전문의 바랍니다.</li>
+                                        <li>객석 입장의 안내가 필요한 경우 사전 티켓박스로 문의바랍니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="cont">
+                                <h3 class="title L_title">결제 방법</h3>
+                                <div class="cont_area">
+                                    <h3 class="title">결제는 신용카드, 가상계좌를 통해 결제가 가능합니다.</h3>
+
+                                    <div class="text_area">
+                                        <h4>가상계좌 입금기한 : 예매 당일로부터 익일 23시 59분까지</h4>
+                                        <p class="text">
+                                            (기한 내 입금하지 않을 경우 예매가 자동 취소되며 은행에 따라 23시 30분 이후로는 입금이 제한될 수 있습니다.)<br>
+                                            인터넷/모바일 예매 마감시간은 공연 관람일 하루 전 17:00까지 가능하며, 예매 마감 후 변경 및 취소는 불가합니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cont">
+                                <h3 class="title L_title">수령 방법</h3>
+                                <div class="cont_area">
+                                    <h3 class="title">현장 수령</h3>
+                                    
+                                    <div class="text_area">
+                                        <h4>공연 시작 1시간 전부터 MODU 티켓박스에서 티켓수령이 가능합니다.
+                                            <p class="text">※ 공연에 따라 티켓박스 운영시간 변동될 수 있음</p>
+                                        </h4>
+                                        <ul class="dot">
+                                            <li class="text">공연시작 전 티켓박스가 혼잡하오니 되도록이면 공연 시작 30분 전까지 공연장에 도착하여 입장권을 수령하여 주시기 바랍니다.</li>
+                                            <li class="text">공연 당일 티켓수령 시 티켓박스에서 예매번호 또는 예매자 본인의 신분증과 휴대폰 번호 뒷자리를 확인합니다.</li>
+                                            <li class="text">원활한 티켓 수령을 위해 신분증, 예매내역서, SMS(예매번호가 포함된 메세지)등을 지참하시기 바랍니다.</li>
+                                            <li class="text">공연초대권의 경우 티켓박스에서 확인 후 티켓 수령을 하시면 됩니다.</li>
+                                            <li class="text">티켓수령 시 할인과 관련된 증빙자료를 티켓박스 창구에 반드시 제시하셔야 하며, 미지참시 우대할인 받은 만큼의 차액을 지불하셔야 합니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="Rlist_02">
+                            <div class="cont">
+                                <h3 class="title L_title">예매취소 마감시간</h3>
+                                <ul class="way">
+                                    <li>
+                                        <h4>인터넷 및 모바일 예매</h4>
+                                        <div class="text_area">
+                                            <strong>공연일 하루 전(평일/주말/공휴일 17시 / 토요일 오전 11시 이전)까지 예매자 직접 취소</strong>
+                                            <ul>
+                                                <li><span>※</span>관람일 전일 오후 5시 이후(토요일은 오전 11시) 또는 관람일 당일 예매하신 건에 대해서는 예매 후 취소/변경/환불 불가</li>
+                                                <li><span>※</span>토요일이 공휴일인 경우 토요일 오전 11시 기준으로 적용 됨</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h4>전화예매</h4>
+                                        <div class="text_area">
+                                            <p class="text">공연 관람일 하루 전 티켓박스 운영시간 사이 가능함 (평일 월~금 10:30~18:00, 공휴일 및 주말 제외)</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h4>현장예매</h4>
+                                        <div class="text_area">
+                                            <p class="text">현장 구매는 관람일 당일 예매 진행이므로 취소 및 환불이 불가함</p>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div class="text_area">
+                                    <h3 class="title L_title">결제수단별 환불 안내</h3>
+                                    <p class="title sub">※ 예매 시 선택한 결제 수단으로 환불됩니다.</p>
+
+                                    <div class="cont_flex">
+                                        <div class="cont_area">
+                                            <h4>신용카드</h4>
+                                            <ul class="dot">
+                                                <li class="text">예매 취소 처리 완료 후 4~5일 후 해당 카드사로 취소 확인 가능합니다.(영업일 기준)</li>
+                                                <li class="text">예매취소 시점과 해당 카드사의 환불처리기준에 따라 환급방법과 환급일은 다소 차이가 있을 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="cont_area">
+                                            <h4>가상계좌(무통장)</h4>
+                                            <ul class="dot">
+                                                <li class="text">예매자 본인명의의 계좌로만 환불이 가능하며, 환불 접수 완료 후 영업일 기준 7일 이내 환불 처리 됩니다.</li>
+                                                <li class="text">가상계좌(무통장) 의 취소수수료 부과 기준은 입금일이 아닌 공연 예약일자로 기준합니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cont">
+                                <h3 class="title L_title">예매취소 시 유의사항</h3>
+
+                                <ul class="dot">
+                                    <li class="text">공연 당일에는 입장권의 취소 및 변경이 불가합니다.</li>
+                                    <li class="text">예매당일은 수수료없이 취소가 가능합니다. 단, 공연 관람일이 예매당일이면 취소는 불가합니다.</li>
+                                    <li class="text">티켓 수령시 할인과 관련된 증빙자료를 티켓박스에 반드시 제시하여야 하며, 미지참시 우대할인 받은 만큼의 차액을 지불하셔야 합니다.</li>
+                                    <li class="text">MODU 홈페이지 이 외의 타 예매처나 공연기획사에서 예매한 티켓은 해당업체로 환불 및 변경절차에 대해 문의를 해주시기 바랍니다.</li>
+                                    <li class="text">초대권은 환불 및 변경이 불가능합니다.</li>
+                                </ul>
+                            </div>
+
+                            <div class="cont">
+                                <h3 class="title L_title">수수료 안내</h3>
+
+                                <div class="table_felx">
+                                    <div class="title_area">
+                                        <h3 class="title">예매수수료</h3>
+                                        <p>모두예술극장 홈페이지<br>수수료 없음</p>
+                                    </div>
+
+                                    <div class="table_area">
+                                        <table>
+                                            <h3 class="title">취소수수료 - 카드, 가상계좌 모든 결제수단에 동일 적용됩니다.</h3>
+                                            <caption class="blind">취소수수료정보(수수료부과 기간산정, 취소 수수료율)</caption>
+                                            <thead>
+                                                <tr>
+                                                    <td>수수료부과 기간산정</td>
+                                                    <td>취소 수수료율</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>공연일 10일 전까지</td>
+                                                    <td>전액환급</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>공연일 7일 전까지</td>
+                                                    <td>10% 공제 후 환급</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>공연일 3일 전까지</td>
+                                                    <td>20% 공제 후 환급</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>공연일 1일 전까지</td>
+                                                    <td>30% 공제 후 환급</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>공연당일</td>
+                                                    <td>
+                                                        취소불가</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="text_area">
+                                            <p class="text">※ 공연 3일 전까지는 예매 후 24시간 이내 취소 시 까지 전액 환급됩니다.</p>
+                                            <p class="text">※ 티켓 위탁판매 사이트(티켓링크)를 통해 구매한 티켓의 경우 판매처의 수수료 부과 기준을 따르며, 해당 판매처로 문의해주시기 바랍니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="ready_area Rlist_03">
+                            <h3 class="title">할인안내</h3>
+                            <img src="img/common/ready.png" alt="페이지 준비중">
+                            <p>페이지 준비중 입니다.</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="foot_area">
+                <div class="f_left">
+                    <div class="policy">
+                        <a href="javascript:;" class="btn">이용약관</a>
+                        <a href="javascript:;" class="btn">개인정보처리방침</a>
+                        <a href="javascript:;" class="btn">영상정보처리기기 운영관리 방침</a>
+                    </div>
+                    <div class="adress">
+                        <span>우) 037 03737 서울특별시 서대문구 충정로7 구세군빌딩 1~3층 모두예술극장</span>
+                        <span>사업자등록번호 560-82-00018</span>
+                    </div>
+                    <p class="copy">COPYRIGHT&copy; 2023 MODU. ALL RIGHTS RESERVED.</p>
+                    <div class="site">
+                        <span>관련사이트 바로가기</span>
+                        <a href="javascript:;"><img src="img/common/footer_link_01.png" alt=""></a>
+                        <a href="javascript:;"><img src="img/common/footer_link_02.png" alt=""></a>
+                        <a href="javascript:;"><img src="img/common/footer_link_03.png" alt=""></a>
+                    </div>
+                    <a href="javascript:;" class="web_logo"><img src="img/common/footer_webC.png" alt=""></a>
+                </div>
+                <div class="f_right">
+                    <p>도와드릴까요?</p>
+                    <p>02-760-9780</p>
+                    <span>운영시간 안내</span>
+                    <span>평일 09시 - 18시 (토/일 공휴일 휴무)</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/reserve.js"></script>
+
+</body>
+</html>
