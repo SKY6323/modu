@@ -63,6 +63,7 @@ $('.id_login .check .checkbox_icon').on('click',function(){
 
 /* 고대비 */
 $('#color').on('click', function(){
+    $(this).toggleClass('on')
     $('body').toggleClass('color')
     $('.bgfont').toggleClass('color')
     $('.nav_area .logo a').toggleClass('color')
@@ -75,6 +76,12 @@ $('#color').on('click', function(){
     $('footer').toggleClass('color')
     $('.f_right').toggleClass('color')
     $('.btn_top').toggleClass('color')
+
+    if($(this).hasClass('on')){
+        $(this).text('저대비')
+    }else{
+        $(this).text('고대비')
+    }
 })
 
 /* 글자확대 */
